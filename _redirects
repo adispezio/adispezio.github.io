@@ -1,2 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-https://amazing-hypatia-39cdc0.netlify.com/* https://adispez.io/:splat 301!
