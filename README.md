@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-# Gatsby + Netlify CMS Starter Test!
-=======
-[![Netlify Status](https://api.netlify.com/api/v1/badges/6ba9348d-e7e8-44b8-a4df-942d6224df05/deploy-status)](https://app.netlify.com/sites/amazing-hypatia-39cdc0/deploys)
+# Anthony's Personal Site
 
-# Gatsby + Netlify CMS Starter
->>>>>>> 98dd050cfd19f19c8d24cda12a88a273a513d424
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6ba9348d-e7e8-44b8-a4df-942d6224df05/deploy-status)](https://app.netlify.com/sites/amazing-hypatia-39cdc0/deploys)
 
 **Note:** This starter uses [Gatsby v2](https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/).
 
@@ -17,7 +13,7 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 - Node (I recommend using v8.2.0 or higher)
 - [Gatsby CLI](https://www.gatsbyjs.org/docs/)
 
-## Getting Started (Recommended)
+## Gettinfdsg Started (Recommended)
 
 Netlify CMS can run in any frontend web environment, but the quickest way to try it out is by running it on a pre-configured starter site with Netlify. The example here is the Kaldi coffee company template (adapted from [One Click Hugo CMS](https://github.com/netlify-templates/one-click-hugo-cms)). Use the button below to build and deploy your own copy of the repository:
 
