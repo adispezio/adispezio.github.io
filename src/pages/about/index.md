@@ -2,6 +2,7 @@
 templateKey: 'about-page'
 path: /about
 title: 
+image: /img/jumbotron.jpg
 ---
 
-come back later
+come back soon
