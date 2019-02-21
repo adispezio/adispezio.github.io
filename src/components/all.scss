@@ -1,0 +1,89 @@
+@import "~bulma/sass/utilities/initial-variables";
+
+// Config vars
+
+$primary: #b5207e;
+$primary-invert: #fff;
+$body-color: #333;
+
+$link: #ff0066;
+
+$body-family: 'Cabin', sans-serif;
+
+.navbar .navbar-menu {
+  box-shadow: none !important;
+}
+
+.navbar-brand {
+  font-size: $size-5;
+  margin-top: -3px;
+
+  .navbar-item {
+    color: $primary;
+  }
+}
+
+.content .taglist {
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 1.5rem;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  
+  li {
+    padding: 0 2rem 1rem 0;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+  }
+}
+
+// Helper Classes
+.full-width-image-container {
+  width: 100vw;
+  height: 400px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin: 5em -50vw;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.margin-top-0 {
+  margin-top: 0 !important
+}
+
+@import "~bulma";
+
+a:hover {
+  position: relative;
+  color: red;
+
+  &:before {
+    content: "";
+    display: block;
+    height: 1.5px;
+    left: 0;
+    right: 0;
+    bottom: -.18rem;
+    background: $link;
+    position: absolute;
+  }
+}
+
+
+.navbar a:hover{
+  &:before {
+    bottom: .75rem;
+    height: 2px;
+    left: .75rem;
+    right: .75rem;
+  }
+}
