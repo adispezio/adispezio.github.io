@@ -29,11 +29,11 @@ const Navbar = class extends React.Component {
  
  render() {
    return (
-  
   <nav className="navbar is-transparent" role="navigation" aria-label="main-navigation">
     <div className="container">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item logo" title="Logo">
+          <div className="avatar"></div>
           Anthony DiSpezio
         </Link>
         {/* Hamburger menu */}

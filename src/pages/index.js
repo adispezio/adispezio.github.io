@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Fade from 'react-reveal/Fade'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -10,7 +11,19 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <section className="section">
+      <section className="section window-height">
+        <div className="container">
+          <div className="columns">
+          <div className="column is-three-quarters">
+            <div className="content">
+              <div className="portrait"></div>
+                <p className="hero-text">Check back soon</p>
+              </div>
+            </div>
+            </div>
+        </div>
+      </section>
+        <section className="section white">
           <div className="container">
             <div className="content">
               <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>

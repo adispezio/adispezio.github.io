@@ -1,14 +1,57 @@
 @import "~bulma/sass/utilities/initial-variables";
 
+
+@font-face {
+
+    font-family: 'GT Super';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../../static/typefaces/GT-Super-Display-Super.woff') format('woff');
+}
 // Config vars
 
-$primary: #b5207e;
+$primary: #aa3467;
 $primary-invert: #fff;
-$body-color: #333;
+$body-color: #1A282C;
 
-$link: #ff0066;
+$link: $primary;
+
 
 $body-family: 'Cabin', sans-serif;
+$body-size: 17px;
+
+$display-family: 'GT Super';
+
+.white {
+  background: #fff;
+}
+
+.window-height {
+  min-height: 100vh;
+  padding-bottom: 0 !important;
+}
+
+.white-fade {
+  height: 10px;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 */
+background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+
+    position: absolute;
+    height: 600px;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
 
 .navbar .navbar-menu {
   box-shadow: none !important;
@@ -21,6 +64,11 @@ $body-family: 'Cabin', sans-serif;
   .navbar-item {
     color: $primary;
   }
+}
+
+.section {
+  z-index: 2;
+  position: relative;
 }
 
 .content .taglist {
@@ -60,11 +108,47 @@ $body-family: 'Cabin', sans-serif;
   margin-top: 0 !important
 }
 
+.list-no-style {
+  list-style-type: none !important;
+  margin-left: 0 !important;
+}
+
+.list-three-col {
+  column-count: 3;
+}
+
 @import "~bulma";
 
-a:hover {
+.avatar {
+    background-image: url('/img/adispezio-96.jpg');
+    background-size: 100%;
+    background-position: center top -17px;
+    width: 48px;
+    height: 48px;
+    // border: 2px solid #eee;
+    float: right;
+    margin-right: 20px;
+    border-radius: 4px;
+}
+
+@include desktop {
+  .portrait {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 650px;
+    background-image: url('/img/adispezio.jpg');
+    background-size: contain;
+    background-position: bottom 0 right -190px;
+    background-repeat: no-repeat;
+    z-index: -4;
+  }
+}
+
+.navbar-menu a:hover {
   position: relative;
-  color: red;
+  color: $primary;
 
   &:before {
     content: "";
@@ -73,11 +157,10 @@ a:hover {
     left: 0;
     right: 0;
     bottom: -.18rem;
-    background: $link;
+    background: $primary;
     position: absolute;
   }
 }
-
 
 .navbar a:hover{
   &:before {
@@ -87,3 +170,11 @@ a:hover {
     right: .75rem;
   }
 }
+
+.hero-text {
+  font-family: $display-family;
+  font-size: 60px;
+  font-weight: 900;
+}
+
+

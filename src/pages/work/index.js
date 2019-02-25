@@ -12,9 +12,9 @@ export default class IndexPage extends React.Component {
       <Layout>
         <section className="section">
           <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-            </div>
+          <p className="hero-text">Check back soon</p>
+          </div>
+          {/*<div className="container">
             {posts
               .map(({ node: post }) => (
                 <div
@@ -39,7 +39,7 @@ export default class IndexPage extends React.Component {
                   </p>
                 </div>
               ))}
-          </div>
+          </div>*/}
         </section>
       </Layout>
     )
