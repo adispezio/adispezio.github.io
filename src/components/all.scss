@@ -10,9 +10,9 @@
 }
 // Config vars
 
-$primary: #aa3467;
+$primary: #FF0066;
 $primary-invert: #fff;
-$body-color: #1A282C;
+$body-color: #25344B;
 
 $link: $primary;
 
@@ -21,6 +21,8 @@ $body-family: 'Cabin', sans-serif;
 $body-size: 17px;
 
 $display-family: 'GT Super';
+
+$column-gap: 2rem;
 
 .white {
   background: #fff;
@@ -67,7 +69,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 }
 
 .section {
-  z-index: 2;
+  // z-index: 2;
   position: relative;
 }
 
@@ -122,28 +124,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 .avatar {
     background-image: url('/img/adispezio-96.jpg');
     background-size: 100%;
-    background-position: center top -17px;
-    width: 48px;
-    height: 48px;
+    // background-position: center top -17px;
+    width: 30px;
+    height: 30px;
     // border: 2px solid #eee;
     float: right;
-    margin-right: 20px;
+    margin-right: 16px;
     border-radius: 4px;
-}
-
-@include desktop {
-  .portrait {
-    position: fixed;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    width: 650px;
-    background-image: url('/img/adispezio.jpg');
-    background-size: contain;
-    background-position: bottom 0 right -190px;
-    background-repeat: no-repeat;
-    z-index: -4;
-  }
 }
 
 .navbar-menu a:hover {
@@ -174,7 +161,33 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 .hero-text {
   font-family: $display-family;
   font-size: 60px;
+  font-size: 7vw;
   font-weight: 900;
 }
 
+.navbar-item {
+  color: $body-color;
+}
 
+
+.catalog {
+  .post-title {
+    font-size: $size-4;
+    font-weight: 900 !important;
+  }
+}
+
+@include desktop {
+  .portrait {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 650px;
+    background-image: url('/img/adispezio.jpg');
+    background-size: contain;
+    background-position: bottom 0 right -190px;
+    background-repeat: no-repeat;
+    z-index: -4;
+  }
+}

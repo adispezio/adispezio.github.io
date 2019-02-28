@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
+import Img from 'gatsby-image'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -10,36 +11,36 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <section className="section">
+        <section className="section catalog">
           <div className="container">
-          <p className="hero-text">Check back soon</p>
-          </div>
-          {/*<div className="container">
+          <div className="columns is-multiline">
             {posts
               .map(({ node: post }) => (
                 <div
-                  className="content"
-                  style={{ border: '1px solid #eee', padding: '2em 4em' }}
+                  className="column is-6"
+                  // style={{ padding: '0' }}
                   key={post.id}
                 >
                   <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
+                    <Img fluid={data.imageOne.childImageSharp.fluid} />
+                    {/*post.excerpt}
+                    <br />
+                    <br />
+                    <Link className="button is-small" to={post.fields.slug}>
+                      Keep Reading →
+                    </Link>*/}
+                  </p>
+                  <p>
+                    <Link className="post-title has-text-primary" to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
                     <span> &bull; </span>
                     <small>{post.frontmatter.date}</small>
                   </p>
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
-                  </p>
                 </div>
               ))}
-          </div>*/}
+            </div>
+          </div>
         </section>
       </Layout>
     )
@@ -54,8 +55,22 @@ IndexPage.propTypes = {
   }),
 }
 
+export const fluidImage = graphql`
+fragment fluidImage on File {
+  childImageSharp {
+    fluid(duotone: { highlight: "#badass", shadow: "#25344B" }, toFormat: PNG) {
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
+`;
+
+
 export const workQuery = graphql`
   query WorkQuery {
+    imageOne: file(relativePath: { eq: "adispezio.jpg" }) {
+      ...fluidImage
+    }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
       filter: { frontmatter: { templateKey: { eq: "work-post" } }}
