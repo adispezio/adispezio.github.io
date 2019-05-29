@@ -55,40 +55,29 @@ IndexPage.propTypes = {
   }),
 }
 
-export const fluidImage = graphql`
-fragment fluidImage on File {
-  childImageSharp {
-    fluid(duotone: { highlight: "#badass", shadow: "#25344B" }, toFormat: PNG) {
-      ...GatsbyImageSharpFluid
-    }
-  }
-}
-`;
-
-
-export const workQuery = graphql`
-  query WorkQuery {
-    imageOne: file(relativePath: { eq: "adispezio.jpg" }) {
-      ...fluidImage
-    }
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "work-post" } }}
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
-          }
-        }
-      }
-    }
-  }
-`
+// export const workQuery = graphql`
+//   query WorkQuery {
+//     imageOne: file(relativePath: { eq: "adispezio.jpg" }) {
+//       ...fluidImage
+//     }
+//     allMarkdownRemark(
+//       sort: { order: DESC, fields: [frontmatter___date] },
+//       filter: { frontmatter: { templateKey: { eq: "work-post" } }}
+//     ) {
+//       edges {
+//         node {
+//           excerpt(pruneLength: 400)
+//           id
+//           fields {
+//             slug
+//           }
+//           frontmatter {
+//             title
+//             templateKey
+//             date(formatString: "MMMM DD, YYYY")
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
