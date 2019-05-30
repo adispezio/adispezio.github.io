@@ -22,13 +22,12 @@ export default class IndexPage extends React.Component {
                   key={post.id}
                 >
                   <p>
-                    <Img fluid={data.imageOne.childImageSharp.fluid} />
-                    {/*post.excerpt}
+                    {post.excerpt}
                     <br />
                     <br />
                     <Link className="button is-small" to={post.fields.slug}>
                       Keep Reading →
-                    </Link>*/}
+                    </Link>}
                   </p>
                   <p>
                     <Link className="post-title has-text-primary" to={post.fields.slug}>
